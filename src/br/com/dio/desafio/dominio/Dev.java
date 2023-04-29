@@ -25,8 +25,17 @@ public class Dev {
     public double calcularTotalXp() {
         Iterator<Conteudo> iterator = this.conteudosConcluidos.iterator();
         double soma = 0;
-        while(iterator.hasNext()){
+        while (iterator.hasNext()) {
             double next = iterator.next().calcularXp();
+            soma += next;
+        }
+        return soma;
+    }
+    public double calcularTotalXpXp() {
+        Iterator<Conteudo> iterator = this.conteudosConcluidos.iterator();
+        double soma = 0;
+        while(iterator.hasNext()){
+            double next = iterator.next().calcularXpXp();
             soma += next;
         }
         return soma;
